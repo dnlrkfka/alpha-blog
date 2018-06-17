@@ -5,3 +5,8 @@
 <p>
   Description: <%= @article.description %>
 </p>
+
+<%= link_to "Edit this article", edit_article_path(@article)  %> |
+<%= link_to "Back to articles listing", articles_path %>
+
+<!--변수가 @article이라서 이녀석의 id를 가져오기 위함-->
