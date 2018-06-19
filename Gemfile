@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'will_paginate', '3.1.5'
+
+gem 'bootstrap-will_paginate', '1.0.0'
 
 gem 'bcrypt', '~> 3.1.7'
 
@@ -50,7 +53,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+  gem 'sqlite3'
+  gem 'rails_db', '2.0.2'
 end
 
 group :production do
