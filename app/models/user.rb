@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :articles
+  has_many :articles, dependent: :destroy
+  # 유저가 탈퇴하면 글들도 다지워지게 만듬
   before_save { self.email = email.downcase }
   validates :username, presence: true,
             uniqueness: { case_sensitive: false }, 
