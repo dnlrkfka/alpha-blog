@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'rails-controller-testing'
+
 gem 'will_paginate', '3.1.5'
 
 gem 'bootstrap-will_paginate', '1.0.0'
@@ -43,6 +45,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'minitest', '~> 5.10', '!= 5.10.2'
 end
 
 group :development do
